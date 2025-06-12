@@ -207,7 +207,7 @@ export default function FuelCalculator() {
               alt="아크로모터스 로고" 
               width={96} 
               height={96}
-              className="w-24 h-24 object-contain mx-auto"
+              className="w-48 h-24 object-contain mx-auto"
             />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">연비 절약 계산기</h1>
@@ -250,7 +250,11 @@ export default function FuelCalculator() {
                       key={car}
                       onClick={() => selectCar(car)}
                       variant={selectedCar === car ? "default" : "outline"}
-                      className="h-12 text-sm"
+                      className={`h-12 text-sm ${
+                        selectedCar === car 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                          : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                      }`}
                     >
                       {car}
                     </Button>
@@ -302,7 +306,11 @@ export default function FuelCalculator() {
                     key={dist.value}
                     onClick={() => handleDistanceSelect(dist.value)}
                     variant={monthlyDistance === dist.value ? "default" : "outline"}
-                    className="h-12 text-sm"
+                    className={`h-12 text-sm ${
+                      monthlyDistance === dist.value 
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                        : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                    }`}
                   >
                     {dist.label}
                   </Button>
@@ -325,28 +333,44 @@ export default function FuelCalculator() {
                 <Button
                   onClick={() => setFuelType('gasoline')}
                   variant={fuelType === 'gasoline' ? "default" : "outline"}
-                  className="h-12 text-sm font-medium"
+                  className={`h-12 text-sm font-medium ${
+                    fuelType === 'gasoline' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                      : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                  }`}
                 >
                   휘발유
                 </Button>
                 <Button
                   onClick={() => setFuelType('diesel')}
                   variant={fuelType === 'diesel' ? "default" : "outline"}
-                  className="h-12 text-sm font-medium"
+                  className={`h-12 text-sm font-medium ${
+                    fuelType === 'diesel' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                      : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                  }`}
                 >
                   경유
                 </Button>
                 <Button
                   onClick={() => setFuelType('premiumGasoline')}
                   variant={fuelType === 'premiumGasoline' ? "default" : "outline"}
-                  className="h-12 text-sm font-medium"
+                  className={`h-12 text-sm font-medium ${
+                    fuelType === 'premiumGasoline' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                      : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                  }`}
                 >
                   고급휘발유
                 </Button>
                 <Button
                   onClick={() => setFuelType('lpg')}
                   variant={fuelType === 'lpg' ? "default" : "outline"}
-                  className="h-12 text-sm font-medium"
+                  className={`h-12 text-sm font-medium ${
+                    fuelType === 'lpg' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                      : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                  }`}
                 >
                   LPG
                 </Button>
