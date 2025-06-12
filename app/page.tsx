@@ -416,14 +416,14 @@ export default function FuelCalculator() {
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <p className="text-gray-700 font-medium text-sm">휘발유</p>
                 </div>
-                <p className="font-bold text-xl text-blue-600">{fuelPrices.gasoline.toLocaleString()}<span className="text-sm font-normal ml-1">원/L</span></p>
+                <p className="font-bold text-lg text-blue-600">{fuelPrices.gasoline.toLocaleString()}<span className="text-sm font-normal ml-1">원/L</span></p>
               </div>
               <div className="bg-white rounded-lg p-4 border-2 border-green-100">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <p className="text-gray-700 font-medium text-sm">경유</p>
                 </div>
-                <p className="font-bold text-xl text-green-600">{fuelPrices.diesel.toLocaleString()}<span className="text-sm font-normal ml-1">원/L</span></p>
+                <p className="font-bold text-lg text-green-600">{fuelPrices.diesel.toLocaleString()}<span className="text-sm font-normal ml-1">원/L</span></p>
               </div>
             </div>
 
