@@ -196,6 +196,16 @@ export default function FuelCalculator() {
 
   const isCalculationReady = currentEfficiency && monthlyDistance
 
+  // 카카오 채널 연결 함수 추가
+  const handleKakaoChat = () => {
+    window.open('http://pf.kakao.com/_hxaxmFn/chat', '_blank')
+  }
+
+  // 전화 상담 연결 함수 추가
+  const handlePhoneCall = () => {
+    window.location.href = 'tel:010-9007-1951'
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 p-4">
       <div className="max-w-lg mx-auto">
@@ -596,12 +606,19 @@ export default function FuelCalculator() {
 
         {/* CTA 버튼 */}
         <div className="space-y-4 mb-8">
-          <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-6 text-lg rounded-xl shadow-lg flex items-center justify-center gap-3">
+          <Button 
+            onClick={handleKakaoChat}
+            className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-6 text-lg rounded-xl shadow-lg flex items-center justify-center gap-3"
+          >
             <MessageCircle className="w-6 h-6" />
             제트윙 무료 상담받기
           </Button>
           <div className="grid grid-cols-2 gap-3">
-            <Button variant="outline" className="py-4 rounded-xl flex items-center justify-center gap-2">
+            <Button 
+              onClick={handlePhoneCall}
+              variant="outline" 
+              className="py-4 rounded-xl flex items-center justify-center gap-2"
+            >
               <Phone className="w-4 h-4" />
               전화 상담
             </Button>
